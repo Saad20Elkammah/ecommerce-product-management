@@ -24,7 +24,7 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200">
-                            @foreach ($products as $product)
+                            @forelse ($products as $product)
                                 <tr class="hover:bg-gray-50 transition duration-200">
                                     <td class="px-6 py-4 text-gray-700 text-sm font-medium">{{ $product->name }}</td>
                                     <td class="px-6 py-4 text-gray-700 text-sm font-medium">${{ number_format($product->price, 2) }}</td>
@@ -34,7 +34,11 @@
                                         <button onclick="deleteProduct({{ $product->id }})" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">Delete</button>
                                     </td>
                                 </tr>
-                            @endforeach
+                            @empty
+                            <tr>
+                                <td colspan="4" class="text-center py-4 text-gray-700 text-sm">No products found.</td>
+                            </tr>
+                            @endforelse
                         </tbody>
                     </table>
 
@@ -83,6 +87,6 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+
     <script src="{{ asset('assets/js/script.js') }}"></script>
 </x-app-layout>
