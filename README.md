@@ -128,7 +128,7 @@ The API provides access to product data. Use it with appropriate authentication.
 - **Get Product Details**:
 
   ```http
-  GET /api/products/{id}
+  GET /products/{id}
   ```
 
 
