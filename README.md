@@ -139,16 +139,6 @@ The API provides access to product data. Use it with appropriate authentication.
 - Sanitization and validation of all user inputs.
 
 ---
-
-## Project Structure
-
-- **app**: Contains controllers, models, and other backend logic.
-- **database**: Migrations and seeders.
-- **resources/views**: Blade templates for frontend views.
-- **public/js**: JavaScript for dynamic frontend functionality.
-
----
-
 ## Additional Notes
 
 For development, run `npm run watch` to automatically compile assets as you work on the project.
